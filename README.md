@@ -53,6 +53,7 @@ Debemos poder observar una respuesta mediante un navegador web o el promagrama P
 
 - `http://localhost:3000/api/users`
 - `http://localhost:3000/api/products`
+- `http://localhost:3000/api/providers`
 
 ## ▶️ Iniciar el Client (Client-Angular) en Modo Desarrollo
 
