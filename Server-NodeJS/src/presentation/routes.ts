@@ -1,6 +1,7 @@
 import { Router } from "express";
 import { UsersRoutes } from "./modules/users/users.routes";
 import { ProductsRoutes } from "./modules/products/products.routes";
+import { ProvidersRoutes } from "./modules/providers/providers.routes";
 import { OrdersRoutes } from "./modules/orders/orders.routes";
 import { TicketsRoutes } from "./modules/tickets/tickets.routes";
 
@@ -34,6 +35,7 @@ export class AppRoutes {
     // Definir rutas
     router.use("/api/users", UsersRoutes.routes);
     router.use("/api/products", ProductsRoutes.routes);
+    router.use("/api/providers", ProvidersRoutes.routes);
     router.use("/api/orders", OrdersRoutes.routes);
     router.use("/api/tickets", TicketsRoutes.routes);
 

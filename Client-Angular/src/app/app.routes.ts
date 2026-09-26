@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { UsersPage } from './pages/users/users.page';
 import { ProductsPage } from './pages/products/products.page';
+import { ProvidersPage } from './pages/providers/providers.page';
 import { OrdersPage } from './pages/orders/orders.page';
 import { TicketsPage } from './pages/tickets/tickets.page';
 
@@ -19,6 +20,9 @@ import { TicketsPage } from './pages/tickets/tickets.page';
  *
  * @see {@link UsersPage}
  * @see {@link ProductsPage}
+ * @see {@link ProvidersPage}
+ * @see {@link OrdersPage}
+ * @see {@link TicketsPage}
  */
 export const routes: Routes = [
 
@@ -39,6 +43,16 @@ export const routes: Routes = [
    * de mostrar y gestionar el listado de productos.
    */
   { path: 'products', component: ProductsPage },
+
+    /**
+   * Ruta de proveedores.
+   *
+   * @remarks
+   * Renderiza el componente `ProvidersPage`, encargado
+   * de mostrar y gestionar el listado de proveedores.
+   */
+  { path: 'providers', component: ProvidersPage },
+
 
   /**
    * Ruta de pedidos.

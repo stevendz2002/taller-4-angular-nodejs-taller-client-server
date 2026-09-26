@@ -1,0 +1,32 @@
+<table class="table table-striped border">
+	<thead>
+		<tr>
+			<th scope="col">Id</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Contacto</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Email</th>
+            <th scope="col">Precio</th>
+			<th scope="col">Categoria</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		@for (provider of providers; track provider.id) {
+			<tr>
+				<th scope="row">{{ provider.id }}</th>
+				<td>{{ provider.name }}</td>
+                <td>{{ provider.contact }}</td>
+                <td>{{ provider.phone }}</td>
+                <td>{{ provider.email }}</td>
+				<td>{{ provider.price | currency }}</td>
+				<td>
+					<dsb-badge-atom
+						[text]="provider.category"
+						[type]="categoryMap[provider.category]" >
+                    </dsb-badge-atom>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
