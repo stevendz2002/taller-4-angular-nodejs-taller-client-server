@@ -1,0 +1,37 @@
+<table class="table table-striped border align-middle">
+	<thead>
+		<tr>
+			<th scope="col">Id</th>
+			<th scope="col">Usuario</th>
+			<th scope="col">ID Usuario</th>
+			<th scope="col">Artículos</th>
+			<th scope="col">Total</th>
+			<th scope="col">Estado</th>
+			<th scope="col">Fecha</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (order of orders; track order.id) {
+			<tr>
+				<th scope="row">{{ order.id }}</th>
+				<td>{{ order.userName }}</td>
+				<td><small class="text-body-secondary font-monospace">{{ order.userId }}</small></td>
+				<td>
+					<ul class="list-unstyled mb-0 small">
+						@for (item of order.items; track item.productId) {
+							<li>{{ item.quantity }}x {{ item.productName }} ({{ item.unitPrice | currency }})</li>
+						}
+					</ul>
+				</td>
+				<td>{{ order.totalAmount | currency }}</td>
+				<td>
+					<dsb-badge-atom
+						[text]="order.status"
+						[type]="statusMap[order.status]">
+					</dsb-badge-atom>
+				</td>
+				<td>{{ order.createdAt | date:'short' }}</td>
+			</tr>
+		}
+	</tbody>
+</table>

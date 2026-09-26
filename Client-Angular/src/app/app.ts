@@ -45,6 +45,7 @@ export class App {
    *   navLinks: [
    *     { text: 'Usuarios', url: '/users' },
    *     { text: 'Productos', url: '/products' }
+   *     { text: 'Proveedores', url: '/providers' }
    *   ]
    * }
    * ```
@@ -58,6 +59,10 @@ export class App {
     navLinks: [
       { text: 'Usuarios', url: '/users' },
       { text: 'Productos', url: '/products' },
+      { text: 'Proveedores', url: '/providers' },
+      { text: 'Orders', url: '/orders'},
+      { text: 'Tickets', url: '/tickets' }
     ]
   };
+
 }
