@@ -86,7 +86,7 @@ export class TicketsService {
       date: faker.date
         .between({ from: '2026-01-01', to: '2026-12-31' })
         .toISOString()
-        .split('T')[0],
+        .split('T')[0] ?? '',
     });
   }
 }
