@@ -102,11 +102,11 @@
  *           example: juan.perez@example.com
  *         phone:
  *           type: string
- *           example: 3001234567
+ *           example: "3001234567"
  *         price:
  *           type: number
  *           example: 4500
- *        category:
+ *         category:
  *           type: string
  *           enum:
  *             - Tecnología
