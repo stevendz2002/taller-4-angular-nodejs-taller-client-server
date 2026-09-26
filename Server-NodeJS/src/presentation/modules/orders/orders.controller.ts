@@ -3,20 +3,42 @@ import { OrdersService } from "./orders.service";
 import { Request, Response } from "express";
 
 
-export class OrdersController{
+/**
+ * Controlador de órdenes.
+ *
+ * @remarks
+ * Esta clase maneja las peticiones HTTP relacionadas con órdenes,
+ * delegando la lógica de negocio al `OrdersService`.
+ */
+export class OrdersController {
 
-    private readonly ordersService = new OrdersService();
+  /**
+   * Servicio de órdenes.
+   */
+  private readonly ordersService = new OrdersService();
 
-
- getAllOrders = (req: Request, res: Response): void => {
+  /**
+   * Maneja la petición HTTP para obtener un listado de órdenes generadas.
+   *
+   * @remarks
+   * La cantidad de órdenes a generar se obtiene a través del parámetro de ruta `countOrders`.
+   *
+   * @param req Objeto de petición de Express
+   * @param res Objeto de respuesta de Express
+   *
+   * @example
+   * ```http
+   * GET /api/orders/10
+   * ```
+   */
+  getAllOrders = (req: Request, res: Response): void => {
     const { countOrders } = req.params;
 
     setTimeout(() => {
       this.ordersService
-      .getAllOrders(Number(countOrders))
-      .then((orders) => res.status(201).json(orders))
-      .catch((error) => HandleError.error(error, res));
+        .getAllOrders(Number(countOrders))
+        .then((orders) => res.status(201).json(orders))
+        .catch((error) => HandleError.error(error, res));
     }, 3000);
   };
-
 }
