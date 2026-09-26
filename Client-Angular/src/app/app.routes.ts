@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { UsersPage } from './pages/users/users.page';
 import { ProductsPage } from './pages/products/products.page';
+import { OrdersPage } from './pages/orders/orders.page';
 
 /**
  * Definición de las rutas principales de la aplicación.
@@ -37,6 +38,15 @@ export const routes: Routes = [
    */
   { path: 'products', component: ProductsPage },
 
+  /**
+   * Ruta de pedidos.
+   *
+   * @remarks
+   * Renderiza el componente `OrdersPage`, encargado
+   * de mostrar y gestionar el listado de pedidos.
+   */
+  { path: 'orders', component: OrdersPage},
+  
   /**
    * Ruta comodín.
    *

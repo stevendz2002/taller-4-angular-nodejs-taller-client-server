@@ -1,5 +1,8 @@
 import { User } from "../interfaces/users.interface";
 
+/**
+ * Mock de usuarios ficticios utilizado en pruebas unitarias y desarrollo local.
+ */
 export const USERS_MOCK: User[] = [
     {
         id: 1,
