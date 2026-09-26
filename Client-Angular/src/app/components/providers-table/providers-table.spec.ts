@@ -55,8 +55,8 @@ describe('ProvidersTableComponent', () => {
       expect(columns[0].nativeElement.textContent.trim()).toBe(String(provider.id));
       expect(columns[1].nativeElement.textContent.trim()).toBe(provider.name);
       expect(columns[2].nativeElement.textContent.trim()).toBe(providerContact);
-      expect(columns[3].nativeElement.textContent.trim()).toBe(providerEmail);
-      expect(columns[4].nativeElement.textContent.trim()).toBe(providerPhone);
+      expect(columns[3].nativeElement.textContent.trim()).toBe(providerPhone);
+      expect(columns[4].nativeElement.textContent.trim()).toBe(providerEmail);
       expect(columns[5].nativeElement.textContent.trim()).toBe(providerPrice);
       expect(columns[6].nativeElement.querySelector('.badge').textContent.trim()).toBe(provider.category);
       expect(columns[6].nativeElement.querySelector('.badge').classList).toContain(`bg-${providerCategory}`);
