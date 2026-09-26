@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { UsersPage } from './pages/users/users.page';
 import { ProductsPage } from './pages/products/products.page';
 import { OrdersPage } from './pages/orders/orders.page';
+import { TicketsPage } from './pages/tickets/tickets.page';
+
 
 /**
  * Definición de las rutas principales de la aplicación.
@@ -46,7 +48,16 @@ export const routes: Routes = [
    * de mostrar y gestionar el listado de pedidos.
    */
   { path: 'orders', component: OrdersPage},
-  
+
+  /**
+   * Ruta de tickets de incidencias.
+   *
+   * @remarks
+   * Renderiza el componente `TicketsPage`, encargado
+   * de mostrar y gestionar el listado de tickets de incidencias.
+   */
+  { path: 'tickets', component: TicketsPage },
+
   /**
    * Ruta comodín.
    *
@@ -56,3 +67,4 @@ export const routes: Routes = [
    */
   { path: '**', redirectTo: 'users' },
 ];
+
