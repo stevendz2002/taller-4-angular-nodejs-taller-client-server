@@ -140,4 +140,56 @@
  *           format: date-time
  *           example: "2026-09-25T14:30:00.000Z"
  */
-export {};
+/**
+ * @openapi
+ * components:
+ *   schemas:
+ *     TicketPriority:
+ *       type: string
+ *       description: Nivel de prioridad del ticket
+ *       enum:
+ *         - Baja
+ *         - Media
+ *         - Alta
+ *         - Crítica
+ *       example: Alta
+ *     TicketStatus:
+ *       type: string
+ *       description: Estado actual del ticket en su ciclo de vida
+ *       enum:
+ *         - Abierto
+ *         - En Progreso
+ *         - En Revisión
+ *         - Resuelto
+ *         - Cerrado
+ *       example: En Progreso
+ *     Ticket:
+ *       type: object
+ *       description: Representa un ticket o incidencia del sistema
+ *       required:
+ *         - id
+ *         - subject
+ *         - assigned_to
+ *         - priority
+ *         - status
+ *         - date
+ *       properties:
+ *         id:
+ *           type: number
+ *           example: 1
+ *         subject:
+ *           type: string
+ *           example: "El servidor de producción no responde a peticiones entrantes"
+ *         assigned_to:
+ *           type: string
+ *           example: "Ana Gómez"
+ *         priority:
+ *           $ref: '#/components/schemas/TicketPriority'
+ *         status:
+ *           $ref: '#/components/schemas/TicketStatus'
+ *         date:
+ *           type: string
+ *           format: date
+ *           example: "2026-09-26"
+ */
+export {};
