@@ -71,4 +71,48 @@
  *           type: number
  *           example: 4500
  */
+/**
+ * @openapi
+ * components:
+ *   schemas:
+ *     Provider:
+ *       type: object
+ *       description: Representa un proveedor del sistema
+ *       required:
+ *         - id
+ *         - name
+ *         - contact
+ *         - email
+ *         - phone
+ *         - price
+ *         - category
+ *       properties:
+ *         id:
+ *           type: number
+ *           example: 1
+ *         name:
+ *           type: string
+ *           example: Supermercado XYZ
+ *         contact:
+ *           type: string
+ *           example: Juan Pérez
+ *         email:
+ *           type: string
+ *           format: email
+ *           example: juan.perez@example.com
+ *         phone:
+ *           type: string
+ *           example: 3001234567
+ *         price:
+ *           type: number
+ *           example: 4500
+ *        category:
+ *           type: string
+ *           enum:
+ *             - Tecnología
+ *             - Alimentos
+ *             - Logística
+ *             - Servicios
+ *           example: Tecnología
+ */
 export {};
